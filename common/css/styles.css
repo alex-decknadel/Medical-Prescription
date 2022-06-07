@@ -1,0 +1,221 @@
+img, embed, object, video {
+	max-width: 100%;
+}
+
+@media screen and (max-width: 520px) {
+	/* Example embedded Media Query */ 
+}
+
+.outerwrap {
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+.innerwrap {
+	width: 95%;
+	max-width: 1105px;  /* Modified width to match design */
+	margin: 0 auto;
+	display: block;
+}
+
+body {
+    background-color: #f4e2d1;
+}
+
+header {
+    /* The <header> already have the outerwrap styes applied to it */
+    background-color: #D9D9E1;
+}
+
+header div {
+    /* The <div> inside <header> already has the innerwrap styles applied, limiting its
+      width and centering the element on the page. The background image is therefore
+      constrained to the area shown. */ 
+    background-image: url(../art/header_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:;
+    height: 622px;  
+}
+
+header div h1 {
+    /* Where the magic happens - the <h1> is forced a specific width and height, and
+      floated to the left with a margin of 70px to push it away from the left side. */
+    background-color: #B8CEE5;
+    width: 260px;
+    height: 146px;
+    padding-top: 45px;
+    border-radius: 0 0 35px 35px;
+    text-align: center;
+    
+    float: left;         /* Magic! */
+    margin-left: 70px;   /* Push away from left side */
+    
+    font-family: "Museo-Slab", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 2em;
+}
+
+header div h2 {
+    /* Where the magic happens - the <h1> is forced a specific width and height, and
+      floated to the left with a margin of 70px to push it away from the left side. */
+    background-color: rgba(217, 217, 225, 0);
+    width: 260px;
+    height: 146px;
+    padding-top: 30px;
+    border-radius: 0 0 35px 35px;
+    text-align: center;
+    
+    float: left;         /* Magic! */
+    margin-left: 100px;   /* Push away from left side */
+    
+    font-family: "Museo-Slab", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 2em;
+}
+
+header div h1 a {
+    text-decoration: none;      /* Hide the text from browsers */
+}
+
+header div h1 a:visited {
+    color: rgba(0, 0, 0, 1);
+    color: rgb(0, 0, 0); 
+}
+
+header div nav {
+    background-color: rgba(217, 217, 225, 0.75);  /* Semi-transparent background color */
+    height: 120px;     /* Other part of the magic - forces the transparent color to a specific height */
+    padding-top: 75px;
+}
+
+header div nav ul {
+    /* Starter code for the navigation */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.408em;
+}
+
+header div nav ul li {
+    margin-left: .791em;
+}
+
+header div nav ul li a {
+    text-decoration: none;
+    /*color: rgba(191, 144, 88, 1);*/
+    border-bottom: 3px solid rgba(100, 7, 25, 0);
+    transition: .2s all ease;
+    
+    font-size: 1.125em;
+    font-family: "Museo-Slab", Verdana, Helvetica, Arial, sans-serif;
+    /*color: rgb(191, 144, 88);*/
+    font-weight: 500;
+}
+
+header div nav ul li a:hover {
+    border-bottom: 3px solid #808775;
+}
+
+header div nav ul li a:visited {
+    color: rgb(0, 0, 0);
+}
+
+article div.outerwrap {
+	margin-top: 90px;
+}
+
+nav {
+	font-size: 1.125em;
+	font-family: "Museo-Slab", Verdana, Helvetica, Arial, sans-serif;
+	color: rgb(244, 226, 209);
+	font-weight: 500;
+	background-color: #630618;
+}
+
+article h3 {
+	font-size: 2.5em;
+	font-family: "Museo-Slab", Verdana, Helvetica, Arial, sans-serif;
+	font-weight: 500;
+    text-transform: uppercase;
+}
+
+#about {
+	background-color: #c2b9a0;
+}
+
+section.innerwrap  {
+    display: flex;
+}
+
+#about section.innerwrap {
+    height: 420px;
+    justify-content: center;
+    padding-top: 29px;
+}
+
+#about section.innerwrap p {
+    width: 21.875em;
+    margin-left: .916em;
+    font-size: 1.5em;
+	font-family: "Museo-Sans", Verdana, Helvetica, Arial, sans-serif;
+	color: black;
+    margin-top: 1.5em;
+}
+
+#about section.innerwrap h3 {
+    margin-left: .55em;
+    margin-top: .5em;
+}
+
+#about section.innerwrap ul {
+    font-size: 1.5em;
+    font-family: "Museo-Sans", Verdana, Helvetica, Arial, sans-serif;
+    color: black;
+
+    margin-top: 1.5em;
+    display: block;
+    text-align: center;
+}
+
+#about section.innerwrap ul li a {
+    text-decoration: none;
+     border-bottom: 3px solid rgba(100, 7, 25, 0);
+     transition: .2s all ease;
+}
+
+#about section.innerwrap ul li a:hover {
+    border-bottom: 3px solid #000;
+}
+
+#about section.innerwrap ul li a:visited {
+    color: rgba(0, 0, 0, 1);
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    background-color: #D9D9E1;
+}
+
+footer.outerwrap div.innerwrap {
+	font-size: 1.125em;
+	font-family: "Museo-Slab", Verdana, Helvetica, Arial, sans-serif;
+	color: rgb(0, 0, 0);
+	display: flex;
+	text-align: left;
+}
+
+#contact {
+    margin-bottom: 2.055em;
+}
+
+#contact {
+    margin-top: 2.333em;
+    line-height: 1.5em;
+}
+
+#contact p:nth-child(1) {
+    text-transform: uppercase;
+}
+
+#contact p em {
+    font-style: italic;
+}

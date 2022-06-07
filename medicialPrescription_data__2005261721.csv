@@ -1,0 +1,29 @@
+Medicial Prescription:
+
+Physician(#physicianId,firstName!,lastName!,dateOfBirth!,licenseExpiration!,prescribes_patient_with>Prescription*, contactable_through>Contact_Info!)
+
+Prescription(#prescriptionId,name!,dosage!,>Physician!,>Patient!,>Order*) 
+
+Patient(#patientId,firstName!,lastName!,dateOfBirth!,healthInsurance?,takes>Prescription*, contactable_through>Contact_Info!)
+
+Customer(#customerId,firstName!,lastName!,pays_for_prescription_through>Payment_Method*, contactable_through>Contact_Info!)
+
+Payment_Method(#paymentId,[payment_type!,>Check?,>Credit_Card?],created_by>Customer!,used_for>Order*) Either a check or credit card must be associated with a payment method if payment_type is not cash.
+
+00001,Credit Card,n/a,n/a,Dwayne R. Amiya,n/a
+00002,Credit Card,n/a,n/a,Dwayne R. Amiya,n/a
+00003,Check,n/a,n/a,Nancy K. Drew,n/a
+00004,Check,n/a,n/a,Ronald T. Goldman,n/a
+00005,Credit Card,n/a,n/a,Rocky A. Springfield,n/a
+00006,Credit Card,n/a,n/a,Jane S. Butcher,n/a
+00007,Cash,n/a,n/a,John Doe,n/a
+
+Check(#checkId,firstName!,middleInitial?,lastName!,checkNumber!,routingNumber!,accountingNumber!,bank?,written_for>Payment_Method!)
+
+Credit_Card(#cardNumber,firstName!,middleInitial?,lastName!,bank?,associated_with>Payment_Method!)
+
+Pharmacy(#pharmacyId,name!,contactable_through>Contact_Info!,>Order+)
+
+Contact_Info(#contactId,phoneNumber!,street!,[city?,state?,ZIP!],>Physician*,>Customer*,>Patient*,>Pharmacy*)
+
+Order(#orderId,totalPrice!,discount?,paid_for_with>Payment_Method!,created_by>Pharmacy!, conducts_sale_of>Prescription!)
